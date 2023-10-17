@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+    <link rel="stylesheet" href="./assets/style/css/style.css">
+
+    <title>Weather App</title>
+</head>
+<body>
+    <header>
+        <h1>Weather App</h1>
+    </header>
+    <div class="container">
+        <aside class="sidebar">
+            <h2>Search for City</h2>
+            <form id="search-form">
+                <input type="text" id="city-input" placeholder="Enter city name">
+                <ul id="suggestions"></ul> <!-- Suggestions will be added here -->
+                <button type="submit" class="btn">Search</button>
+            </form>
+            <ul id="history-list">
+                <!-- Search history will be added here -->
+            </ul>
+        </aside>
+        <main>
+            <section id="current-weather">
+                <div id="current-weather-container">
+                    <!-- CURRENT WEATHER DATA -->
+                </div>
+            </section>
+            <section id="forecast">
+                <h2>5-Day Forecast</h2>
+                <div id="forecast-container">
+                    <!-- FORECAST DATA GOES HERE -->
+                </div>
+            </section>
+        </main>
+    </div>
+    <script src="./assets/js/script.js"></script>
+  </body>
+  </html>
