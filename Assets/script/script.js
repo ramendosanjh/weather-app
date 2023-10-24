@@ -32,7 +32,7 @@ function getWeatherData(cityName) {
       getForecastData(data.coord.lat, data.coord.lon);
     })
     .catch(function (error) {
-      console.error("Error fetching weather data:", error);
+      console.error("Error with fetching weather data:", error);
     });
 }
 
@@ -66,13 +66,13 @@ function getForecastData(lat, lon) {
       updateForecast(data);
     })
     .catch(function (error) {
-      console.error("Error fetching forecast data:", error);
+      console.error("Error with fetching forecast data:", error);
     });
 }
 
 // Function to update the 5-day forecast display
 function updateForecast(data) {
-  forecastContainer.innerHTML = '<h2>Five Day Forecast </h2>';
+  forecastContainer.innerHTML = '<h2>Five Day Forecast Below</h2>';
 
   // Process and display the 5-day forecast data
   for (let i = 1; i <= 5; i++) {
