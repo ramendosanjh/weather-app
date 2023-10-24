@@ -68,12 +68,7 @@ function todayWeather(cityName) {
   const todayBaseUrl = 'https://api.openweathermap.org';
   const todayUpdatedUrl = `${todayBaseUrl}?q=${encodeURIComponent(cityName)}&cnt=1&units=metric&appid=d91f911bcf2c0f925fb6535547a5ddc9`;
 
-  fetch(todayUpdatedUrl, {
-    method: 'GET', // You can specify the HTTP method here (GET is default)
-    headers: {
-      'Content-Type': 'application/json', // Specify the content type
-    },
-  })
+  fetch(todayUpdatedUrl)
     .then(function (response) {
       return response.json();
     })
@@ -91,14 +86,9 @@ function todayWeather(cityName) {
 function forecastWeather(cityName) {
   refreshIcons();
   const baseUrl = 'https://api.openweathermap.org/data/2.5/forecast';
-  const updatedUrl = `${baseUrl}?q=${encodeURIComponent(cityName)}&cnt=60&units=metric&appid=${weatherApiKey}`;
+  const updatedUrl = `${baseUrl}?q=${encodeURIComponent(cityName)}&cnt=60&units=metric&appid=d91f911bcf2c0f925fb6535547a5ddc9`;
 
-  fetch(updatedUrl, {
-    method: 'GET', // You can specify the HTTP method here (GET is default)
-    headers: {
-      'Content-Type': 'application/json', // Specify the content type
-    },
-  })
+  fetch(updatedUrl)
     .then(function (response) {
       return response.json();
     })
@@ -146,7 +136,6 @@ function forecastWeather(cityName) {
       // Handle errors (e.g., network issues, API errors)
     });
 }
-
 
 // Function to remove all previous classes that were added dynamically to show the weather icon
 function refreshIcons() {
