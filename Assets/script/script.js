@@ -39,7 +39,7 @@ function getWeatherData(cityName) {
 // Function to update current weather display
 function updateCurrentWeather(data) {
   const location = data.name;
-  const temperature = (data.main.temp - 273.15).toFixed(2); // Convert from Kelvin to Celsius
+  const temperature = (data.main.temp - 273.15).toFixed(2); 
   const description = data.weather[0].description;
   const icon = `https://openweathermap.org/img/wn/${data.weather[0].icon}.png`;
 
